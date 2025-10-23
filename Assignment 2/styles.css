@@ -10,6 +10,31 @@ header {
     color: white;
     padding: 10px 0;
     text-align: center;
+    border-radius: 12px;
+}
+
+menu {
+    position:fixed;
+    width:fit-content;
+    top: 12px;
+    left: 12px;
+    padding: 1em;
+    margin: 0px;
+    border-radius: 8px;
+    background-color: beige;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2em;
+}
+
+menu ul li {
+    margin: 0;
 }
 
 main {

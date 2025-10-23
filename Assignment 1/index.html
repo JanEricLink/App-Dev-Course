@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Catan Ruleset</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header>
+        <h1>
+		    <img src="Bilder/Catan Logo.png" alt="Catan" style="height:2em">
+		    Ruleset
+        </h1>
+	</header>
+
+	<main>
+		<section>
+			<h2>Goal</h2>
+			<p>Every player tries to get 10 VP (Victory Points) by building settlements, roads and cities.</p>
+		</section>
+
+		<section>
+			<h2>Components</h2>
+			<ul>
+				<li><strong>Players:</strong> 3–4 players (2–6 with expansions)</li>
+				<li><strong>Game pieces:</strong> 95 pieces (19 hexes, 6 harbors, 18 settlements, 14 cities, 60 roads, 1 robber)</li>
+				<li><strong>Cards:</strong> 25 development cards (14 knight cards, 6 progress cards, 5 victory point cards), 95 resource cards (19 each of brick, lumber, wool, grain, ore)</li>
+			</ul>
+			<div class="centered-stack">
+				<img src="Bilder/Catan Cards.jpg" alt="Catan Cards" style="width:25em" class="centered-img">
+				<img src="Bilder/Catan Map Tiles.png" alt="Catan Map Tiles" style="width:25em" class="centered-img">
+			</div>
+		</section>
+
+		<section>
+			<h2>Setup</h2>
+
+			<h3>Board</h3>
+			<p>The game board is made up of hexagonal tiles that represent different types of terrain (forest, hills, mountains, fields, pasture, and desert). The tiles are arranged randomly to create a unique board for each game.</p>
+
+			<h3>Players</h3>
+			<p>Each player chooses a color and takes the corresponding pieces. They place two settlements and two roads on the board. The first settlement is placed in player turn order; the second settlement is placed in reverse turn order (snake draft). After placement, players collect resource cards for any terrain hexes adjacent to their second settlement.</p>
+		</section>
+
+		<section>
+  <h2>Game Rules</h2>
+  <p>The following rules describe the full turn structure and key gameplay systems in <strong>Catan</strong> (Base Game, 3–4 players):</p>
+  
+  <ol>
+    <li>
+      <strong>Start of Turn – Dice Roll</strong>
+      <ul>
+        <li>The active player rolls two six-sided dice (2D6).</li>
+        <li>Each terrain hex with a matching number produces resources for all players who have a settlement or city adjacent to that hex.</li>
+        <li>Settlements yield <strong>1 resource card</strong>; cities yield <strong>2 resource cards</strong>.</li>
+        <li>If a <strong>7</strong> is rolled:
+          <ul>
+            <li>No resources are produced.</li>
+            <li>Every player holding more than 7 resource cards must discard half (rounded down).</li>
+            <li>The active player moves the <strong>Robber</strong> to a new hex and steals 1 random resource card from a player with an adjacent settlement or city.</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <strong>Trading Phase (Optional)</strong>
+      <ul>
+        <li>The active player may trade resources with other players or with the bank.</li>
+        <li><em>Domestic Trade:</em> Players negotiate freely; trades must be agreed upon by both sides.</li>
+        <li><em>Maritime Trade:</em> The player may trade with the bank using:
+          <ul>
+            <li>4:1 ratio — any four identical resources for one of any type.</li>
+            <li>3:1 ratio — if the player has a generic harbor.</li>
+            <li>2:1 ratio — if the player has a specialized harbor for that resource.</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <strong>Building Phase (Optional)</strong>
+      <ul>
+        <li>Players may spend resource cards to build or upgrade structures according to the following costs:</li>
+        <ul>
+          <li>Road — 1 Brick + 1 Lumber</li>
+          <li>Settlement — 1 Brick + 1 Lumber + 1 Grain + 1 Wool</li>
+          <li>City (upgrade) — 3 Ore + 2 Grain</li>
+          <li>Development Card — 1 Ore + 1 Grain + 1 Wool</li>
+        </ul>
+        <li><strong>Building restrictions:</strong>
+          <ul>
+            <li>Roads must connect to your existing network.</li>
+            <li>Settlements must be at least two edges away from any other settlement.</li>
+            <li>Each city replaces one of your settlements (you return the settlement piece to your supply).</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <strong>Development Cards</strong>
+      <ul>
+        <li>Purchased during the Building Phase; kept secret until played.</li>
+        <li>Types of Development Cards:
+          <ul>
+            <li><strong>Knight:</strong> Move the Robber and steal one resource card.</li>
+            <li><strong>Progress Cards:</strong> 
+              <ul>
+                <li>Road Building — place two free roads.</li>
+                <li>Year of Plenty — take any two resource cards from the supply.</li>
+                <li>Monopoly — claim all of one resource type from other players.</li>
+              </ul>
+            </li>
+            <li><strong>Victory Point Cards:</strong> Worth 1 VP each; revealed only when counting for victory.</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <strong>Special Achievements</strong>
+      <ul>
+        <li><strong>Longest Road (2 VP):</strong> Awarded to the player with the longest continuous road of at least 5 segments.</li>
+        <li><strong>Largest Army (2 VP):</strong> Awarded to the player who has played at least 3 Knight cards.</li>
+        <li>These bonuses can change ownership during the game.</li>
+      </ul>
+    </li>
+
+    <li>
+      <strong>Victory Condition</strong>
+      <ul>
+        <li>The first player to reach <strong>10 Victory Points (VP)</strong> during their turn immediately wins the game.</li>
+        <li>Victory Points are earned through:</li>
+        <ul>
+          <li>Settlements — 1 VP each</li>
+          <li>Cities — 2 VP each</li>
+          <li>Longest Road — 2 VP</li>
+          <li>Largest Army — 2 VP</li>
+          <li>Victory Point Development Cards — 1 VP each</li>
+        </ul>
+      </ul>
+    </li>
+  </ol>
+</section>
+	</main>
+
+	<footer>
+		<p>&copy Jan Eric Link 2025 </p>
+	</footer>
+</body>
+</html>

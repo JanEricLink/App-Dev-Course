@@ -7,18 +7,27 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <menu>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="signin.html">Sign Up</a></li>
+            </ul>
+    </menu>
     <header>
         <h1>Log-In Form</h1>
     </header>
 
     <main>
-        <form action="#" method="post">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-
+        <form action="content.html" method="get" class="stack">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
             <button type="submit">Log In</button>
         </form>
     </main>

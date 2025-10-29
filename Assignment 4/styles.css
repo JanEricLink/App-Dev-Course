@@ -1,0 +1,168 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3eec7;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #c49e5d;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 12px;
+}
+
+menu {
+    position:fixed;
+    width:fit-content;
+    top: 12px;
+    left: 12px;
+    padding: 1em;
+    margin: 0px;
+    border-radius: 8px;
+    background-color: beige;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2em;
+}
+
+menu ul li {
+    margin: 0;
+}
+
+main {
+    text-align: center;
+    margin: 20px;
+}
+
+section {
+    width: fit-content;
+    margin: 20px;
+    padding: 20px 40px 20px 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+p {
+    margin: 0 0 15px 0;
+    padding: 0 20px;
+}
+
+a {
+    color: darkgoldenrod;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(118, 86, 7);
+    text-decoration: none;
+}
+
+ul, ol {
+    margin: 15px 0 15px 40px;
+    padding: 0;
+}
+
+li{
+    margin-bottom: 10px;
+}
+
+img {
+    border-radius:8px ;
+}
+
+.stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+button {
+    width: 20em;
+    background-color: darkgoldenrod;
+    border-radius: 8px;
+    border-color: black;
+}
+
+button:hover {
+    width: 20em;
+    background-color:rgb(215, 164, 36);
+    border-radius: 8px;
+    border-color: black;
+}
+
+label {
+    display:inline-flex;
+    ;
+    width: 6em;
+    font-weight: bold;
+}
+
+input{
+    width: 18em;
+    padding: 0.5em;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.stack-horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+.card{
+    width:fit-content;
+    padding:15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #fff;
+    margin: 10px;
+}
+
+.profile-pic{
+    background-color: lightgray;
+    width:200px;
+    height:200px;
+    border-radius: 10%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.name{
+    font-weight: bold;
+}
+
+.job{
+    font-style: italic;
+    color: gray;
+}

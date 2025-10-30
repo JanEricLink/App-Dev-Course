@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to this To-Do List Application</h1>
+    </header>
+
+    <main>
+            <menu>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="signin.html">Sign Up</a></li>
+            </ul>
+    </menu>
+
+    <header>
+        <h1>Welcome to this random Site</h1>
+        <p>Please Log In or Sign Up</p>
+    </header>
+
+    <main>
+        <div class="stack">
+            <a href="login.html"><button>Log In</button></a>
+            <a href="signin.html"><button>Sign Up</button></a>
+        </div>
+    </main>
+    </main>
+</body>
+
+<script>
+    async function getTime() {
+        try {
+            const response = await fetch('/time', { method: 'GET' });
+            const data = await response.json();
+            document.getElementById('clock').textContent = `${data.day}.${data.month}.${data.year} - ${data.hour}:${data.minute}:${data.second}`;
+        } catch (error) {
+            console.error('Fehler beim Abrufen der Zeit:', error);
+        }
+    }
+    getTime();
+</script>
+</html>

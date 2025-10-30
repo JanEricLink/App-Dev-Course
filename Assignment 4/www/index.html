@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Time</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to this Clock</h1>
+    </header>
+
+    <main>
+        <div>
+            <p>It is currently:</p>
+            <p id="clock"></p>
+            <button onclick="getTime()">Get Current Time</button>
+        </div>
+    </main>
+    
+</body>
+<script>
+    async function getTime() {
+        try {
+            const response = await fetch('/time', { method: 'GET' });
+            const data = await response.json();
+            document.getElementById('clock').textContent = `${data.day}.${data.month}.${data.year} - ${data.hour}:${data.minute}:${data.second}`;
+        } catch (error) {
+            console.error('Fehler beim Abrufen der Zeit:', error);
+        }
+    }
+    getTime();
+</script>
+</html>

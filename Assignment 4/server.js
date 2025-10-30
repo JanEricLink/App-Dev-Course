@@ -1,24 +1,30 @@
-const http = require('http');
-const fs = require('fs');
+const express = require('express');
+const path = require('path');
+const app = express();
+const port = 3000;
 
-const server = http.createServer((req, res) => {
-    if (req.method === 'GET' && req.url === '/') {
-        fs.readFile('index.html', (err, data) => { 
-            if (err) {
-                res.writeHead(500, {'Content-Type': 'text/plain'});
-                res.end('Internal Server Error');
-                console.error(err);
-            } else {
-                res.writeHead(200, {'Content-Type': 'text/html'});
-                res.end(data);
-            }
-        });
-    } else {
-        res.writeHead(404, {'Content-Type': 'text/plain'});
-        res.end('Not Found');
-    }
+// Middleware
+app.use(express.json());
+app.use(express.static("www"))
+
+// Routes
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(__dirname, 'index.html'));
+// });
+app.get('/time', (req, res) => {
+    const now = new Date();
+    const jsonData = {
+        day: now.getDate(),
+        month: now.getMonth() + 1,
+        year: now.getFullYear(),
+        hour: now.getHours(),
+        minute: now.getMinutes(),
+        second: now.getSeconds()
+    };
+    res.json(jsonData);
 });
-const PORT = 3000;
-server.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+
+// Start Server
+app.listen(port, () => {
+console.log(`Server is running on port ${port}`);
 });

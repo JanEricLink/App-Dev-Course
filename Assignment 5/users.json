@@ -1,0 +1,50 @@
+[
+  {
+    "username": "admin",
+    "firstname": "admin",
+    "lastname": "admin",
+    "email": "jan@designwerkstatt-trossingen.de",
+    "password": "1234",
+    "todos": []
+  },
+  {
+    "username": "JanyJapany",
+    "firstname": "Jan Eric",
+    "lastname": "Link",
+    "email": "jan@designwerkstatt-trossingen.de",
+    "password": "test",
+    "todos": []
+  },
+  {
+    "username": "test",
+    "firstname": "Jan Eric",
+    "lastname": "Link",
+    "email": "jan@designwerkstatt-trossingen.de",
+    "password": "jan",
+    "todos": []
+  },
+  {
+    "username": "test2",
+    "firstname": "Jan Eric",
+    "lastname": "Link",
+    "email": "jan@designwerkstatt-trossingen.de",
+    "password": "jan",
+    "todos": []
+  },
+  {
+    "username": "idrxp",
+    "firstname": "adrian",
+    "lastname": "gula",
+    "email": "adi@gula.de",
+    "password": "1234",
+    "todos": []
+  },
+  {
+    "username": "adi",
+    "firstname": "adrian",
+    "lastname": "gula",
+    "email": "adi@gula.de",
+    "password": "1234",
+    "todos": []
+  }
+]

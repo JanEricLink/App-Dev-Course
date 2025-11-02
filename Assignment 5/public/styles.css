@@ -8,12 +8,12 @@ body {
 header {
     background-color: #c49e5d;
     color: white;
-    padding: 10px 0;
+    padding: 30px 0;
     text-align: center;
     border-radius: 12px;
 }
 
-menu {
+.navbar {
     position:fixed;
     width:fit-content;
     top: 12px;
@@ -25,7 +25,7 @@ menu {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-menu ul {
+.navbar ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -33,7 +33,7 @@ menu ul {
     gap: 2em;
 }
 
-menu ul li {
+.navbar ul li {
     margin: 0;
 }
 
@@ -97,6 +97,10 @@ img {
     border-radius:8px ;
 }
 
+div{
+    display: inline;
+}
+
 .stack {
     display: flex;
     flex-direction: column;
@@ -119,10 +123,10 @@ button:hover {
 }
 
 label {
-    display:inline-flex;
-    ;
-    width: 6em;
+    display: inline-block;
+    width: 10em;
     font-weight: bold;
+    text-align: right;
 }
 
 input{
@@ -139,30 +143,8 @@ input{
     gap: 1em;
 }
 
-.card{
-    width:fit-content;
-    padding:15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    background-color: #fff;
-    margin: 10px;
-}
-
-.profile-pic{
-    background-color: lightgray;
-    width:200px;
-    height:200px;
-    border-radius: 10%;
-    object-fit: cover;
-    margin-bottom: 15px;
-}
-
-.name{
+.error {
+    color: red;
     font-weight: bold;
-}
-
-.job{
-    font-style: italic;
-    color: gray;
+    margin-bottom: 15px;
 }

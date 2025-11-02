@@ -1,21 +1,21 @@
 // Function declarations
-async function checkLogin() {
-    const response = await fetch('/token', {
-        method: 'GET',
-        headers: { 'Authorization': localStorage.getItem('token') }
-    })
-    .then(res => {
-        if (res.ok) {
-            window.location.href = 'todo.html';
-        }
-    })
-    .catch(err => {
-        console.error('Error checking token:', err);
-    });
-}
+// async function checkLogin() {
+//     const response = await fetch('/token', {
+//         method: 'GET',
+//         headers: { 'Authorization': localStorage.getItem('token') }
+//     })
+//     .then(res => {
+//         if (res.ok) {
+//             window.location.href = 'todo.html';
+//         }
+//     })
+//     .catch(err => {
+//         console.error('Error checking token:', err);
+//     });
+// }
 
 // Run on site refresh
-checkLogin();
+// checkLogin();
 
 // async function getTime() {
 //     try {

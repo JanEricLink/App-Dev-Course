@@ -5,16 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="todo-app.js"></script>
+    <script src="todo-app.js" defer></script>
 </head>
 
 <body>
-    <div id="navbar"></div>
+    <div id="navbar-Container"></div>
     <script src="navbar-app.js" defer></script>
-    
+
+    <div id="edit-ToDo-Overlay-Container"></div>
+    <div id="edit-Group-Overlay-Container"></div>
+
     <header>
         <h1>Todo Page</h1>
         <p>This is the todo page. Only logged-in users should see this.</p>
     </header>
+    <main>
+        <div>
+            <button class="ToDo-Edit-Button" id="Add-ToDo-Button">Add To-Do</button>
+            <button class="ToDo-Edit-Button" id="Add-Group-Button">Add Group</button>
+        </div>
+        <ul id="dynamic-list"></ul>
+
+    </main>
 </body>
 </html>

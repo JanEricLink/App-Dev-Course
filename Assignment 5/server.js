@@ -7,6 +7,7 @@ const port = 3000;
 
 // Middleware
 app.use(express.static("public"))
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(session({
     secret: "supergeheimesessionkey", // unbedingt geheim halten
@@ -45,7 +46,7 @@ app.post('/createuser', (req, res) => {
     if (cpassword !== password) {
         return res
             .status(409)
-            .render("signin", { error: "Passwords do not match" });
+            .render("signup", { error: "Passwords do not match" });
     }
     try {
         // Check if user already exists
@@ -58,7 +59,7 @@ app.post('/createuser', (req, res) => {
         if (existingUser) {
             return res
                 .status(409)
-                .render("signin", { error: "Username already exists" });
+                .render("signup", { error: "Username already exists" });
         }
         // Create and save the new user
         const newUser = new User(username, firstname, lastname, email, password);
@@ -92,6 +93,51 @@ app.get('/todo', (req, res) => {
     res.sendFile(path.join(__dirname, 'private', 'todo.html'));
 });
 
+app.get('/todo-items', (req, res) => {
+    if (!req.session.user) {
+        return res.status(401).json({ message: "Unauthorized" });
+    }
+    const username = req.session.user.username;
+    const user = Users.find(user => user.username === username);
+    if (!user) {
+        return res.status(404).json({ message: "User not found" });
+    }
+    res.json(user.groups || []);
+});
+
+app.post('/add-todo', (req, res) => {
+    if (!req.session.user) {
+        return res.status(401).json({ message: "Unauthorized" });
+    }
+    const username = req.session.user.username;
+    const user = Users.find(user => user.username === username);
+    if (!user) {
+        return res.status(404).json({ message: "User not found" });
+    }
+    console.log("Request body:", req.body);
+    const { title, description, group } = req.body;
+    const newTodo = new Todo(title, description);
+    console.log("Adding todo:", newTodo, "to group:", group);
+    const currentGroup = user.groups.find(g => g.name === group);
+    currentGroup.todos.push(newTodo);
+    res.status(201).json(newTodo);
+});
+
+app.post('/add-group', (req, res) => {
+    if (!req.session.user) {
+        return res.status(401).json({ message: "Unauthorized" });
+    }
+    const username = req.session.user.username;
+    const user = Users.find(user => user.username === username);    
+    if (!user) {
+        return res.status(404).json({ message: "User not found" });
+    }
+    const { name, color } = req.body;
+    const newGroup = new group(name, color);
+    user.groups.push(newGroup);
+    res.status(201).json(newGroup);
+});
+
 
 //Classes
 class User {
@@ -101,6 +147,16 @@ class User {
         this.lastname = lastname;
         this.email = email;
         this.password = password;
+        this.groups = [
+            new group("Default", "#ffffff")
+        ];
+    }
+}
+
+class group {
+    constructor(name, color) {
+        this.name = name;
+        this.color = color;
         this.todos = [];
     }
 }
@@ -116,6 +172,13 @@ class Todo {
 //Variables
 
 
+//Functions
+
+
+//Reroutung all invalid routes to 404.html
+app.use((req, res) => {
+    res.status(404).sendFile(path.resolve("public/404.html"));
+});
 
 // Start Server
 let Users = fs.existsSync('users.json') ? JSON.parse(fs.readFileSync('users.json')) : [];

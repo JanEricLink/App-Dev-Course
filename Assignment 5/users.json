@@ -21,7 +21,46 @@
     "lastname": "Link",
     "email": "jan@designwerkstatt-trossingen.de",
     "password": "jan",
-    "todos": []
+    "groups": [
+      {
+        "name": "Default",
+        "color": "#FFFFFF",
+        "todos": [
+          {
+            "title": "Welcome to your ToDo App!",
+            "description": "This is your first ToDo item. You can edit or delete it, and start adding your own tasks!",
+            "completed": false
+          }
+        ]
+      },
+      {
+        "name": "Work",
+        "color": "#FF5733",
+        "todos": [
+          {
+            "title": "tetds tit",
+            "description": "test desc",
+            "completed": false
+          }
+        ]
+      },
+      {
+        "name": "Personal",
+        "color": "#33FF57",
+        "todos": [
+          {
+            "title": "testtest",
+            "description": "test desc",
+            "completed": false
+          }
+        ]
+      },
+      {
+        "name": "einkauf",
+        "color": "#ff0000",
+        "todos": []
+      }
+    ]
   },
   {
     "username": "test2",
@@ -45,6 +84,14 @@
     "lastname": "gula",
     "email": "adi@gula.de",
     "password": "1234",
+    "todos": []
+  },
+  {
+    "username": "toni",
+    "firstname": "antonella",
+    "lastname": "link",
+    "email": "link@toni.de",
+    "password": "hallo",
     "todos": []
   }
 ]

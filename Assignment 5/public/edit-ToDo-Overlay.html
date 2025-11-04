@@ -1,0 +1,23 @@
+<div class="Overlay" id="edit-ToDo-Overlay">
+    <div class="Overlay-content">
+        <div class="Overlay-header">
+            <span class="close-button" id="close-edit-ToDo-Overlay">&times;</span>
+            <h2>Edit To-Do Item</h2>
+        </div>
+        <form id="edit-ToDo-form">
+            <label for="ToDo-Title-Input">Title:</label>
+            <input type="text" id="ToDo-Title-Input" name="title" required>
+            
+            <label for="ToDo-Description-Input">Description:</label>
+            <input id="ToDo-Description-Input" name="description" required>
+
+            <label for="ToDo-Group-Input">Due Date:</label>
+            <select id="ToDo-Group-Input" name="group" required>
+                <option value="null">None</option>
+            </select>
+                
+            <button type="button" id="Create-Todo-Button">Save Task</button>
+            <button type="button" id="Cancel-Edit-ToDo-Button">Cancel</button>
+        </form>
+    </div>
+</div>

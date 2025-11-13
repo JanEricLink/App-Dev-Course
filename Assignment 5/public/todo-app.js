@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
+    //#region Overlays
     // Wait for the Edit ToDo Overlay HTML to be fully loaded
     const editToDoContainer = document.getElementById('edit-ToDo-Overlay-Container');
     const ToDohtml = await (await fetch('/edit-ToDo-Overlay.html')).text();
@@ -101,4 +102,54 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
         GroupOverlay.style.display = 'none';
     });
+    //#endregion
+
+    //#region ToDo List Display
+    // Function to create and display todo items
+    async function displayTodosAndGroups (){
+        if (await fetch('/session-status').then(res => res.status === 200)) {
+            await fetch('/todo-items')
+            .then(response => response.json())
+            todoItems = responsejson;
+
+            const todoListContainer = document.getElementById('group-container');
+            todoListContainer.innerHTML = '';
+
+            displayGroups(todoItems, todoListContainer);
+        }
+    }
+
+    function displayGroups(todoItems, todoListContainer) {
+        todoItems.forEach(group => {
+            const groupDiv = document.createElement('div');
+            groupDiv.className = 'todo-group';
+            groupDiv.id = `group-${group.name}`;
+
+            const groupTitle = document.createElement('h2');
+            groupTitle.textContent = group.name;
+            groupDiv.appendChild(groupTitle);
+
+            todoListContainer.appendChild(groupDiv);
+
+            displayTodos(group, groupDiv);
+        });
+    }
+
+    function displayTodos(group, groupDiv) {
+        group.todos.forEach(todo => {
+            const todoDiv = document.createElement('div');
+            todoDiv.className = 'todo-item';
+            todoDiv.id = `todo-${todo.title}`;
+            const todoTitle = document.createElement('h3');
+            todoTitle.textContent = todo.title;
+            todoDiv.appendChild(todoTitle);
+
+            const todoDescription = document.createElement('p');
+            if (todo.description!=''){todoDescription.textContent = todo.description};
+            todoDiv.appendChild(todoDescription);
+            groupDiv.appendChild(todoDiv);
+        });
+    }
+    displayTodosAndGroups();
+    //#endregion
 });

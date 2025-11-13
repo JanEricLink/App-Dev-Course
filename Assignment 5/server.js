@@ -10,10 +10,10 @@ app.use(express.static("public"))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(session({
-    secret: "supergeheimesessionkey", // unbedingt geheim halten
+    secret: "supergeheimesessionkey",
     resave: false,
     saveUninitialized: false,
-    cookie: { maxAge: 1000 * 60 * 30, httpOnly: true } // 30 Minuten
+    cookie: { maxAge: 1000 * 60 * 30, httpOnly: true }
 }));
 app.set("view engine", "ejs");
 

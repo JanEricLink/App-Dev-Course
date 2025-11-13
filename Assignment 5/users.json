@@ -41,6 +41,11 @@
             "title": "tetds tit",
             "description": "test desc",
             "completed": false
+          },
+          {
+            "title": "hausaufgaben",
+            "description": "mach",
+            "completed": false
           }
         ]
       },
@@ -93,5 +98,19 @@
     "email": "link@toni.de",
     "password": "hallo",
     "todos": []
+  },
+  {
+    "username": "Jan",
+    "firstname": "Jan Eric",
+    "lastname": "Link",
+    "email": "jan@designwerkstatt-trossingen.de",
+    "password": "t",
+    "groups": [
+      {
+        "name": "Default",
+        "color": "#ffffff",
+        "todos": []
+      }
+    ]
   }
 ]

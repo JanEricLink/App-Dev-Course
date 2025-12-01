@@ -1,17 +1,17 @@
-<div class="Overlay" id="edit-ToDo-Overlay">
-    <div class="Overlay-content">
-        <div class="Overlay-header">
+<div class="overlay" id="edit-ToDo-Overlay">
+    <div class="overlay-content">
+        <div class="overlay-header">
             <span class="close-button" id="close-edit-ToDo-Overlay">&times;</span>
-            <h2>Edit To-Do Item</h2>
+            <h2 id="ToDo-Overlay-Title">Edit To-Do Item</h2>
         </div>
         <form id="edit-ToDo-form">
-            <label for="ToDo-Title-Input">Title:</label>
-            <input type="text" id="ToDo-Title-Input" name="title" required>
+            <label class="overlay-label" for="ToDo-Title-Input">Title:</label>
+            <input class="overlay-input" type="text" id="ToDo-Title-Input" name="title" required>
             
-            <label for="ToDo-Description-Input">Description:</label>
-            <input id="ToDo-Description-Input" name="description" required>
+            <label class="overlay-label" for="ToDo-Description-Input">Description:</label>
+            <input class="overlay-input" id="ToDo-Description-Input" name="description" required>
 
-            <label for="ToDo-Group-Input">Due Date:</label>
+            <label class="overlay-label" for="ToDo-Group-Input">Due Date:</label>
             <select id="ToDo-Group-Input" name="group" required>
             </select>
                 

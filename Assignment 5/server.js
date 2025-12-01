@@ -200,4 +200,4 @@ process.on('SIGINT', () => {
 });
 
 // Start the server with the command: node server.js
-// Or use node --watch server.js for automatic restarts on file changes
+// Or use node --watch server.js for automatic restarts on file changes (might cause issues with session handling)

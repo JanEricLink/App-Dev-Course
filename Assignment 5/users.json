@@ -63,7 +63,13 @@
       {
         "name": "einkauf",
         "color": "#ff0000",
-        "todos": []
+        "todos": [
+          {
+            "title": "test",
+            "description": "",
+            "completed": false
+          }
+        ]
       }
     ]
   },

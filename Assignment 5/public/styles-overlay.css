@@ -1,0 +1,52 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlay-content {
+    width: 50%;
+    height: 50%;
+    display:flexbox;
+    justify-content: center;
+    align-items: center;
+    background-color:  #c49e5d;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+}
+
+.overlay-header {
+    flex-direction: row;
+}
+
+.overlay-label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.overlay-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 500px) {
+    .overlay-content {
+        width: 90%;
+        height: auto;
+    }
+}

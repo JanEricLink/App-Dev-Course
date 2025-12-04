@@ -1,0 +1,15 @@
+{
+  "name": "ToDo-List-Web-App",
+  "short_name": "ToDo-List",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f3eec7",
+  "theme_color": "#c49e5d",
+  "icons": [
+    {
+      "src": "/icons/PWA_Icon_transparent_bg_144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ]
+}

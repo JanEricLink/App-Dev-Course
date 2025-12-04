@@ -3,11 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
+    <title>ToDo Home</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" href="/icons/PWA_Icon_transparent_bg.png">
+    <link rel="apple-touch-icon" type="image/png" href="/icons/PWA_Icon_transparent_bg.png">
 </head>
 
 <body>
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("/serviceworker.js");
+        }
+    </script>
+
     <div id="navbar-Container"></div>
     <script src="navbar-app.js" defer></script>
 
